@@ -14,8 +14,8 @@ var orm = {
     })
   },
   //Insert new value to the database
-  insertOne: function(table, cols, value, cb) {
-    var queryString = "INSERT INTO " + table;
+  insertOne: function(tableInput, cols, value, cb) {
+    var queryString = "INSERT INTO " + tableInput;
     queryString += " (" + cols + ") ";
     queryString += "VALUES " + value.toString() + ";";
 
@@ -27,9 +27,9 @@ var orm = {
     })
   },
   //Update current value in the database
-  updateOne: function(table, column, condition) {
-    var queryString = "UPDATE " + table;
-    queryString += " SET " + column;
+  updateOne: function(tableInput, cols, condition) {
+    var queryString = "UPDATE " + tableInput;
+    queryString += " SET " + cols;
     queryString += " WHERE " + condition;
     
     connection.query(queryString, function(err, result) {
@@ -41,5 +41,5 @@ var orm = {
   }
 };
 
-//Export orm
+//Export orm functions for model burger.js
 module.exports = orm;
