@@ -1,6 +1,8 @@
 var connection = require('./connection.js');
 
+
 var orm = {
+  //Select all from database
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
 
@@ -11,6 +13,7 @@ var orm = {
       cb(result);
     })
   },
+  //Insert new value to the database
   insertOne: function(table, cols, value, cb) {
     var queryString = "INSERT INTO " + table;
     queryString += " (" + cols + ") ";
@@ -23,7 +26,8 @@ var orm = {
       cb(result);
     })
   },
-  updateOne: function() {
+  //Update current value in the database
+  updateOne: function(table, column, condition) {
     var queryString = "UPDATE " + table;
     queryString += " SET " + column;
     queryString += " WHERE " + condition;
