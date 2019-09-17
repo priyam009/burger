@@ -6,11 +6,9 @@ var burger = require('../models/burger.js');
 
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
-    var burgers_hbs = {
-      burgers: data
-    };
-    console.log("burgers_hbs", burgers_hbs);
-    // res.render("index", burgers_hbs);
+    
+    console.log("data", data);
+    res.render("index", {data: data});
   })
 });
 
