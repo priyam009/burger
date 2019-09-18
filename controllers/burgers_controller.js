@@ -4,7 +4,7 @@ var router = express.Router();
 //Import burger.js model to use its database function
 var burger = require('../models/burger.js');
 
-router.get("/api", function(req, res) {
+router.get("/", function(req, res) {
   burger.selectAll(function(data) {
     
     console.log("data", data);
