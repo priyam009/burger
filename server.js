@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 
 //Set PORT
 var PORT = process.env.PORT || 3000;
@@ -7,7 +8,7 @@ var PORT = process.env.PORT || 3000;
 var app = express();
 
 //Serve static content to the server from the 'public' directory
-app.use(express.static('/public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 //Parse application body
 app.use(express.urlencoded(({extended: true})));

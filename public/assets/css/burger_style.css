@@ -1,0 +1,40 @@
+.custom-container{
+  background-color: #4d8781;
+}
+
+.custom-header h1 {
+  font-size: 100px;
+  font-family: 'Anton', sans-serif;
+}
+
+.custom-image img {
+  height: 350px;
+}
+
+.custom-form {
+  background-color: #c59c02;
+  padding: 20px;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+}
+
+.custom-form label {
+  color: #fff;
+}
+
+.custom-form input {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 10px 5px 17px -6px rgba(0,0,0,0.45);
+}
+
+.custom-form button {
+  width: 120px;
+  margin-left: 60px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 17px -6px rgba(0,0,0,0.45);
+}
+
+.fa-hamburger {
+  color: rgb(167, 60, 60);
+}
