@@ -1,6 +1,9 @@
 //Set up MySQL connection
 var mysql = require('mysql');
 
+//To run on Local host
+require('dotenv').config();
+
 var connection = mysql.createConnection({
   host: process.env.JAWSDB_URL,
   port: 3306,
@@ -13,7 +16,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if(err) {
     console.error("error connecting: " + err.stack);
-  }
+  } 
   console.log("connected to id: " + connection.threadId);
 });
 
