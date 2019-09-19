@@ -1,5 +1,14 @@
 var connection = require('./connection.js');
 
+function printQuestionMarks(value) {
+  var arr = [];
+
+  for(var i=0; i<value; i++) {
+    arr.push("?");
+  }
+
+  return arr.toString();
+}
 
 var orm = {
   //Select all from database
