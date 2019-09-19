@@ -9,6 +9,19 @@ body {
 .custom-header h1 {
   font-size: 100px;
   font-family: 'Anton', sans-serif;
+  text-shadow: 0px 2px 11px #190B07
+}
+
+.custom-header h1:first-child {
+  color: #ffd423;
+}
+
+.custom-header h1:nth-child(2) {
+  color: #7ed63f;
+}
+
+.custom-header h1:last-child {
+  color: #ff5023;
 }
 
 .custom-image img {
