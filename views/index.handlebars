@@ -24,17 +24,21 @@
   <div>
     <ul>
       {{#each data}}
-      <div class="d-flex flex-md-row justify-content-between m-3">
-        <h3>{{burger_name}}</h3>
-        <button class="add-burger" data-id="{{id}}">Devour It!</button>
-      </div>
+        {{#unless devoured}}
+          <div class="d-flex flex-md-row justify-content-between m-3">
+          <h3>{{burger_name}}</h3>
+          <button class="add-burger" data-id="{{id}}">Devour It!</button>
+          </div>
+        {{/unless}}
       {{/each}}
     </ul>
   </div>
   <div>
     <ul>
       {{#each data}}
-      <h3>{{burger_name}}</h3>
+        {{#if devoured}}
+          <h3>{{burger_name}}</h3>
+        {{/if}}
       {{/each}}
     </ul>
   </div>
