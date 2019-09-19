@@ -20,23 +20,28 @@ var orm = {
         throw err;
       }
       cb(result);
-    })
+    });
   },
   //Insert new value to the database
   insertOne: function(tableInput, cols, value, cb) {
-    var queryString = "INSERT INTO " + tableInput;
-    queryString += " (" + cols + ") ";
-    queryString += "VALUES " + value.toString() + ";";
 
-    connection.query(queryString, function(err, result) {
+    var queryString = "INSERT INTO " + tableInput;
+    queryString += " (" + cols.toString() + ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(value.length);
+    queryString += ");";
+
+    // console.log("cb", cb)
+
+    connection.query(queryString, value, function(err, result) {
       if(err) {
         throw err;
       }
       cb(result);
-    })
+    });
   },
   //Update current value in the database
-  updateOne: function(tableInput, cols, condition) {
+  updateOne: function(tableInput, cols, condition, cb) {
     var queryString = "UPDATE " + tableInput;
     queryString += " SET " + cols;
     queryString += " WHERE " + condition;
@@ -46,7 +51,7 @@ var orm = {
         throw err;
       }
       cb(result);
-    })
+    });
   }
 };
 
