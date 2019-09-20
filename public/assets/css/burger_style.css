@@ -9,7 +9,7 @@ body {
 .custom-header h1 {
   font-size: 100px;
   font-family: 'Anton', sans-serif;
-  text-shadow: 0px 2px 11px #190B07
+  text-shadow: 0px 2px 11px #190B07;
 }
 
 .custom-header h1:first-child {
@@ -34,7 +34,6 @@ body {
   font-family: 'Comfortaa', cursive;
   font-size: 20px;
   box-shadow: 0px 0px 35px 9px rgba(0,0,0,0.75);
-
 }
 
 .custom-form label {
@@ -70,17 +69,25 @@ body {
 
 .main-content {
   min-height: 30vh;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Vollkorn SC', serif;
   padding: 20px;
   color: #fff;
 }
 
+.main-content div{
+  text-shadow: 0px 2px 3px #121212;
+}
+
+.main-content div h3{
+  text-decoration: underline;
+}
+
 .add-burger {
-  width: 120px;
+  width: 130px;
   margin-left: 60px;
   border-radius: 10px;
   box-shadow: 10px 5px 17px -6px rgba(0,0,0,0.45);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .add-burger:hover {
