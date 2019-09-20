@@ -1,8 +1,8 @@
 //Set up MySQL connection
 var mysql = require('mysql');
 
-//To run on Local host
-require('dotenv').config();
+//To run on Local host uncomment the next line or require dotenv in CLI
+// require('dotenv').config();
 
 var connection = mysql.createConnection({
   host: process.env.JAWSDB_URL,
